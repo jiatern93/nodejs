@@ -61,8 +61,8 @@ console.log(Bucky.favFood);
 console.log(19 == '19'); //true because == comapares value
 console.log(19 === '19'); //false because === compares type
 */
-//tutorial 4
-var Bucky = {
+//tutorial 4 this pointer
+/*var Bucky = {
 	printFirstName: function(){
 		console.log('My name is Bucky');
 		console.log(this === Bucky);
@@ -74,9 +74,43 @@ function doSomethingWorthless(){
 		console.log('\nI am worthless');
 		console.log(this === global);
 }
-doSomethingWorthless();
-//the default calling context is global. T
-//tutorial 5
+doSomethingWorthless();*/
+//the default calling context is global.
+//tutorial 5 prototype
+/*function User(){
+	this.name = "";
+	this.life = 100;
+	this.giveLife = function giveLife(targetPlayer){
+		targetPlayer.life += 1;
+		this.life -= 1;
+		console.log(this.name + ' gave 1 life to ' + targetPlayer.name);
+	};
+}
 
+var Bucky = new User();
+var Wendy = new User();
+Bucky.name = "Bucky";
+Wendy.name = "Wendy";
 
+Bucky.giveLife(Wendy);
+console.log("Bucky's life: " + Bucky.life);
+console.log("Wendy's life: " + Wendy.life);
 
+User.prototype.uppercut = function uppercut(targetPlayer){
+	targetPlayer.life -= 3;
+	console.log(this.name + ' just uppercutted ' + targetPlayer.name);
+};
+
+Wendy.uppercut(Bucky);
+console.log("Bucky's life: " + Bucky.life);
+console.log("Wendy's life: " + Wendy.life);
+
+User.prototype.magic = 60;
+console.log("Bucky's Magic: " + Bucky.magic);
+console.log("Wendy's Magic: " + Wendy.magic);*/
+//tutorial 6 modules
+//importing and exporting.
+//this part is importing data from the movie.js module
+var movies = require('./movie'); //./ means look in the same directory that i am at for a file called movies. remember to never include the .js extension
+movies.printAvatar();
+console.log(movies.favMovie);
