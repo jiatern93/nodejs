@@ -111,6 +111,13 @@ console.log("Wendy's Magic: " + Wendy.magic);*/
 //tutorial 6 modules
 //importing and exporting.
 //this part is importing data from the movie.js module
-var movies = require('./movie'); //./ means look in the same directory that i am at for a file called movies. remember to never include the .js extension
+/*var movies = require('./movie'); //./ means look in the same directory that i am at for a file called movies. remember to never include the .js extension
 movies.printAvatar();
-console.log(movies.favMovie);
+console.log(movies.favMovie);*/
+
+//tutorial 8
+//shared state of modules for memory efficiency
+require('./emily');
+require('./bucky');
+
+//tutorial 9

@@ -11,7 +11,7 @@ module.exports.avatar = printAvatar;
 module.exports.avatar = printChappie;*/
 
 //tutorial 7
-module.exports = {
+/*module.exports = {
 	printAvatar: function(){
 		console.log("Avatar");
 	},
@@ -21,3 +21,15 @@ module.exports = {
 
 	favMovie: "The Matrix"
 }; //is automatically added to any module
+*/
+
+//tutorial 8
+/*module.exports = {
+	favMovie: ""
+};*/
+
+module.exports = function(){
+	return{
+		favMovie: ""
+	}
+}
