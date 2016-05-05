@@ -1,6 +1,13 @@
 //core modules don't need file paths
 var http = require('http'); //
 var fs = require('fs'); //file system module - allows me to read, write, and delete files
+var connect = require('connect');
+
+var app=connect();
+
+function profile(request, response){
+	console.log('user requested profile');
+}
 
 //404 Error
 function send404Response(response){
@@ -20,6 +27,7 @@ function OnRequest(request, response){
 }
 
 http.createServer(OnRequest).listen(9099);
+app.use('/profile', profile);
 console.log("Server is now running at http://localhost:9099");
 
 //old code - sample webpage tutorial
